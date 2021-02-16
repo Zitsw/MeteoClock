@@ -59,12 +59,18 @@ lcd.print("H=");
 lcd.print(hum_disp);
 if(ppm_disp <=1000){
     analogWrite(G_LIGHT,20);
+    analogWrite(B_LIGHT,0);
+    analogWrite(R_LIGHT,0);
 }
 else if(ppm_disp>1000&&ppm_disp<1400){
     analogWrite(B_LIGHT,20);
+    analogWrite(R_LIGHT,0);
+    analogWrite(G_LIGHT,0);
 }
 else{
     analogWrite(R_LIGHT,20);
+    analogWrite(B_LIGHT,0);
+    analogWrite(G_LIGHT,0);
 }
 delay(3000);
 
